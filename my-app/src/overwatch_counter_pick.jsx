@@ -2,422 +2,422 @@ import React, { useState } from 'react';
 import { Shield, Sword, Heart, AlertCircle, CheckCircle2, Users, Zap } from 'lucide-react';
 
 const heroes = {
-  tank: [
-    { 
-      name: 'D.Va', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/ca114f72193e4d58a85c087e9409242f1a31e808cf4058678b8cbf767c2a9a0a.png',
-      counters: ['Pharah', 'Junkrat', 'Reaper'], 
-      counteredBy: ['Zarya', 'Symmetra', 'Mei'],
-      hardCounters: ['Zarya'],
-      softCounters: ['Pharah', 'Junkrat'],
-      synergies: ['Genji', 'Tracer', 'Pharah'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Doomfist', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/13750471c693c1a360eb19d5ace229c8599a729cd961d72ebee0e157657b7d18.png',
-      counters: ['Widowmaker', 'Ashe', 'Ana'], 
-      counteredBy: ['Sombra', 'Pharah', 'Orisa'],
-      hardCounters: ['Sombra'],
-      softCounters: ['Widowmaker', 'Ashe'],
-      synergies: ['Ana', 'Zarya', 'Lucio'],
-      difficulty: 'hard'
-    },
-    { 
-      name: 'Junker Queen', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/cef2406b2244b80506f83b8fb9ebaf6248820eed7bfed84c0a8ff3195d52ecc2.png',
-      counters: ['Genji', 'Tracer', 'Lucio'], 
-      counteredBy: ['Ana', 'Zenyatta', 'Reaper'],
-      hardCounters: ['Ana'],
-      softCounters: ['Genji', 'Tracer'],
-      synergies: ['Lucio', 'Brigitte', 'Reaper'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Mauga', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/f0b6f430c5f9e2b0f8b3c6c7a24e32a8f6f2b4f0c5f9e2b0f8b3c6c7a24e32a8.png',
-      counters: ['Reinhardt', 'Winston', 'Brigitte'], 
-      counteredBy: ['Ana', 'Reaper', 'Bastion'],
-      hardCounters: ['Ana'],
-      softCounters: ['Reinhardt', 'Winston'],
-      synergies: ['Baptiste', 'Mercy', 'Bastion'],
-      difficulty: 'easy'
-    },
-    { 
-      name: 'Orisa', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/71e96294617e81051d120b5d04b491bb1ea40e2933da44d6631aae149aac411d.png',
-      counters: ['Reinhardt', 'Roadhog', 'Pharah'], 
-      counteredBy: ['Sombra', 'Reaper', 'Junkrat'],
-      hardCounters: ['Sombra'],
-      softCounters: ['Pharah', 'Roadhog'],
-      synergies: ['Bastion', 'Baptiste', 'Mercy'],
-      difficulty: 'easy'
-    },
-    { 
-      name: 'Ramattra', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/3e0367155e1940a24da076c6f1f065aacede88dbc49d6d7a641c820d427fb142.png',
-      counters: ['Genji', 'Tracer', 'D.Va'], 
-      counteredBy: ['Bastion', 'Reaper', 'Pharah'],
-      hardCounters: ['Bastion'],
-      softCounters: ['Genji', 'Tracer'],
-      synergies: ['Ana', 'Zenyatta', 'Reaper'],
-      difficulty: 'hard'
-    },
-    { 
-      name: 'Reinhardt', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/490d2f79f8547d6e364306af60c8184fb8024b8e55809e4cc501126109981a65.png',
-      counters: ['Genji', 'Tracer', 'Reaper'], 
-      counteredBy: ['Bastion', 'Junkrat', 'Reaper'],
-      hardCounters: ['Bastion'],
-      softCounters: ['Junkrat'],
-      synergies: ['Ana', 'Lucio', 'Brigitte'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Roadhog', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/5010a6bf14e073554f2c9c9a92679a021e2b1a1f6364b2f72c026ace9658c0ae.png',
-      counters: ['Sombra', 'Tracer', 'Genji'], 
-      counteredBy: ['Ana', 'Reaper', 'Mei'],
-      hardCounters: ['Ana'],
-      softCounters: ['Reaper'],
-      synergies: ['Zenyatta', 'Kiriko', 'Ana'],
-      difficulty: 'easy'
-    },
-    { 
-      name: 'Sigma', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/cd7a4c0a0df8924afb2c9f6df864ed040f20250440c36ca2eb634acf6c445ce5.png',
-      counters: ['Pharah', 'Widowmaker', 'Hanzo'], 
-      counteredBy: ['Doomfist', 'Symmetra', 'Sombra'],
-      hardCounters: ['Symmetra'],
-      softCounters: ['Pharah'],
-      synergies: ['Baptiste', 'Ashe', 'Hanzo'],
-      difficulty: 'hard'
-    },
-    { 
-      name: 'Winston', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/bd9c8e634d89488459dfc1aeb21b602fa5c39aa05601a4167682f3a3fed4e0ee.png',
-      counters: ['Genji', 'Widowmaker', 'Hanzo'], 
-      counteredBy: ['Reaper', 'Bastion', 'Roadhog'],
-      hardCounters: ['Reaper'],
-      softCounters: ['Genji', 'Widowmaker'],
-      synergies: ['D.Va', 'Genji', 'Tracer'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Wrecking Ball', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/5c7e89a8f88c73f68449e24739f28ddb49be0afda9ab60e45f0bc0e8620fc9b3.png',
-      counters: ['Widowmaker', 'Ashe', 'Ana'], 
-      counteredBy: ['Sombra', 'Mei', 'Cassidy'],
-      hardCounters: ['Sombra'],
-      softCounters: ['Mei', 'Cassidy'],
-      synergies: ['Tracer', 'Sombra', 'Zenyatta'],
-      difficulty: 'hard'
-    },
-    { 
-      name: 'Zarya', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/8819ba85823136640d8eba2af6fd7b19d46b9ee8ab192a4e06f396d281b47818.png',
-      counters: ['D.Va', 'Roadhog', 'Reinhardt'], 
-      counteredBy: ['Pharah', 'Junkrat', 'Bastion'],
-      hardCounters: ['Pharah'],
-      softCounters: ['D.Va'],
-      synergies: ['Reinhardt', 'Genji', 'Hanzo'],
-      difficulty: 'hard'
-    }
-  ],
-  damage: [
-    { 
-      name: 'Ashe', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/8dc2a024c9b7d95c7141b2ef065e2c8ee14f6f7bfbf35b8151a7c248f821757d.png',
-      counters: ['Pharah', 'Echo', 'Mercy'], 
-      counteredBy: ['Genji', 'Tracer', 'Winston'],
-      hardCounters: ['Genji'],
-      softCounters: ['Pharah', 'Echo'],
-      synergies: ['Mercy', 'Baptiste', 'Orisa'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Bastion', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/4d715f722c42215072b5dd0240904aaed7b5285df0b2b082cfc96a7278691bee.png',
-      counters: ['Reinhardt', 'Orisa', 'Roadhog'], 
-      counteredBy: ['Genji', 'Tracer', 'Widowmaker'],
-      hardCounters: ['Genji'],
-      softCounters: ['Reinhardt', 'Orisa'],
-      synergies: ['Orisa', 'Baptiste', 'Mercy'],
-      difficulty: 'easy'
-    },
-    { 
-      name: 'Cassidy', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/6cfb48b5597b657c2eafb1277dc5eef4a07eae90c265fcd37ed798189619f0a5.png',
-      counters: ['Tracer', 'Genji', 'Pharah'], 
-      counteredBy: ['Widowmaker', 'Hanzo', 'Roadhog'],
-      hardCounters: ['Widowmaker'],
-      softCounters: ['Tracer', 'Genji'],
-      synergies: ['Ana', 'Baptiste', 'Reinhardt'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Echo', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/f086bf235cc6b7f138609594218a8385c8e5f6405a25d6383338df95c7cefcf6.png',
-      counters: ['Junkrat', 'Torbjörn', 'Bastion'], 
-      counteredBy: ['Widowmaker', 'Soldier: 76', 'Ashe'],
-      hardCounters: ['Widowmaker'],
-      softCounters: ['Junkrat', 'Torbjörn'],
-      synergies: ['Mercy', 'Ana', 'Baptiste'],
-      difficulty: 'hard'
-    },
-    { 
-      name: 'Genji', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/4de21a8802b9ab0a28b169f1a8a7c19cc9d928a69fab0b7a0cb8d37295f263e3.png',
-      counters: ['Widowmaker', 'Hanzo', 'Bastion'], 
-      counteredBy: ['Winston', 'Symmetra', 'Moira'],
-      hardCounters: ['Winston'],
-      softCounters: ['Widowmaker', 'Hanzo'],
-      synergies: ['Ana', 'Zenyatta', 'Winston'],
-      difficulty: 'hard'
-    },
-    { 
-      name: 'Hanzo', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/aecd8fa677f0093344fab7ccb7c37516c764df3f5ff339a5a845299e4b23b7df.png',
-      counters: ['Bastion', 'Torbjörn', 'Zenyatta'], 
-      counteredBy: ['Genji', 'Tracer', 'Winston'],
-      hardCounters: ['Genji'],
-      softCounters: ['Bastion', 'Torbjörn'],
-      synergies: ['Zarya', 'Sigma', 'Baptiste'],
-      difficulty: 'hard'
-    },
-    { 
-      name: 'Junkrat', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/037e3df083624e5480f8996821287479a375f62b470572a22773da0eaf9441d0.png',
-      counters: ['Reinhardt', 'Bastion', 'Torbjörn'], 
-      counteredBy: ['Pharah', 'Widowmaker', 'Zarya'],
-      hardCounters: ['Pharah'],
-      softCounters: ['Reinhardt', 'Bastion'],
-      synergies: ['Orisa', 'Baptiste', 'Brigitte'],
-      difficulty: 'easy'
-    },
-    { 
-      name: 'Mei', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/1533fcb0ee1d3f9586f84b4067c6f63f075fdff9452b0c977c8b8fabc1a3b25d.png',
-      counters: ['Winston', 'Roadhog', 'Doomfist'], 
-      counteredBy: ['Pharah', 'Widowmaker', 'Hanzo'],
-      hardCounters: ['Pharah'],
-      softCounters: ['Winston', 'Roadhog'],
-      synergies: ['Zarya', 'Ana', 'Lucio'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Pharah', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/f8261595eca3e43e3b37cadb8161902cc416e38b7e0caa855f4555001156d814.png',
-      counters: ['Junkrat', 'Torbjörn', 'Bastion'], 
-      counteredBy: ['Widowmaker', 'Soldier: 76', 'Ashe'],
-      hardCounters: ['Widowmaker'],
-      softCounters: ['Junkrat', 'Torbjörn'],
-      synergies: ['Mercy', 'Ana', 'Baptiste'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Reaper', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/2edb9af69d987bb503cd31e39f99978892178de6c060a160763b202a17f12447.png',
-      counters: ['Winston', 'Roadhog', 'Reinhardt'], 
-      counteredBy: ['Pharah', 'Widowmaker', 'Cassidy'],
-      hardCounters: ['Pharah'],
-      softCounters: ['Winston', 'Roadhog'],
-      synergies: ['Lucio', 'Moira', 'Ana'],
-      difficulty: 'easy'
-    },
-    { 
-      name: 'Sojourn', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/a53bf7ad9d2f33aaf9199a00989f86d4ba1e67c281ba550312c7d96e70fec4ea.png',
-      counters: ['Pharah', 'Echo', 'Widowmaker'], 
-      counteredBy: ['Genji', 'Tracer', 'Sombra'],
-      hardCounters: ['Genji'],
-      softCounters: ['Pharah', 'Echo'],
-      synergies: ['Baptiste', 'Mercy', 'Reinhardt'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Soldier: 76', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/20b4ef00ed05d6dba75df228241ed528df7b6c9556f45bcfb8e11eb6d88c1b52.png',
-      counters: ['Pharah', 'Mercy', 'Bastion'], 
-      counteredBy: ['Widowmaker', 'Genji', 'Roadhog'],
-      hardCounters: ['Widowmaker'],
-      softCounters: ['Pharah', 'Mercy'],
-      synergies: ['Ana', 'Baptiste', 'Reinhardt'],
-      difficulty: 'easy'
-    },
-    { 
-      name: 'Sombra', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/bca8532688f01b071806063b9472f1c0f9fc9c7948e6b59e210006e69cec9022.png',
-      counters: ['Doomfist', 'Wrecking Ball', 'Tracer'], 
-      counteredBy: ['Winston', 'Moira', 'Brigitte'],
-      hardCounters: ['Winston'],
-      softCounters: ['Doomfist', 'Wrecking Ball'],
-      synergies: ['Tracer', 'Wrecking Ball', 'Zenyatta'],
-      difficulty: 'hard'
-    },
-    { 
-      name: 'Symmetra', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/eca9f9d775a5c4f556319234e4df204e6f1885d96e754a2c3c3d7783cf8435ce.png',
-      counters: ['Genji', 'D.Va', 'Tracer'], 
-      counteredBy: ['Pharah', 'Widowmaker', 'Junkrat'],
-      hardCounters: ['Pharah'],
-      softCounters: ['Genji', 'Tracer'],
-      synergies: ['Orisa', 'Baptiste', 'Brigitte'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Torbjörn', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/a479c5c8a1fa317c2676e4fd1e8353b3a459cbeaa1eb7ed07ce63fa1d0fb9b5e.png',
-      counters: ['Tracer', 'Genji', 'Lucio'], 
-      counteredBy: ['Pharah', 'Junkrat', 'Widowmaker'],
-      hardCounters: ['Pharah'],
-      softCounters: ['Tracer', 'Genji'],
-      synergies: ['Brigitte', 'Baptiste', 'Orisa'],
-      difficulty: 'easy'
-    },
-    { 
-      name: 'Tracer', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/a66413200e934da19540afac965cfe8a2de4ada593d9a52d53108bb28e8bbc9c.png',
-      counters: ['Widowmaker', 'Hanzo', 'Zenyatta'], 
-      counteredBy: ['Cassidy', 'Brigitte', 'Torbjörn'],
-      hardCounters: ['Cassidy'],
-      softCounters: ['Widowmaker', 'Hanzo'],
-      synergies: ['Winston', 'Lucio', 'Zenyatta'],
-      difficulty: 'hard'
-    },
-    { 
-      name: 'Widowmaker', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/a714f1cb33cc91c6b5b3e89ffe7e325b99e7c89cc8e8feced594f81305147efe.png',
-      counters: ['Pharah', 'Zenyatta', 'Ana'], 
-      counteredBy: ['Genji', 'Tracer', 'Winston'],
-      hardCounters: ['Genji'],
-      softCounters: ['Pharah', 'Zenyatta'],
-      synergies: ['Mercy', 'Baptiste', 'Orisa'],
-      difficulty: 'hard'
-    },
-    { 
-      name: 'Venture', 
-      image: 'https://static.playoverwatch.com/img/pages/heroes/venture/hero-select-portrait.png',
-      counters: ['Bastion', 'Torbjörn', 'Symmetra'], 
-      counteredBy: ['Pharah', 'Echo', 'Mei'],
-      hardCounters: ['Pharah'],
-      softCounters: ['Bastion', 'Torbjörn'],
-      synergies: ['Lucio', 'Ana', 'Baptiste'],
-      difficulty: 'medium'
-    }
-  ],
-  support: [
-    { 
-      name: 'Ana', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/3429c394716364bbef802180e9763d04812757c205e1b4568bc321772096ed86.png',
-      counters: ['Roadhog', 'Pharah', 'Widowmaker'], 
-      counteredBy: ['Genji', 'Tracer', 'Winston'],
-      hardCounters: ['Genji'],
-      softCounters: ['Roadhog', 'Pharah'],
-      synergies: ['Reinhardt', 'Genji', 'Pharah'],
-      difficulty: 'hard'
-    },
-    { 
-      name: 'Baptiste', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/f979896f74d594cb4174a6daa4c5f9d8c3f689698b7027cdbec0eec97c2a819f.png',
-      counters: ['Pharah', 'Genji', 'Roadhog'], 
-      counteredBy: ['Sombra', 'Widowmaker', 'Hanzo'],
-      hardCounters: ['Sombra'],
-      softCounters: ['Pharah'],
-      synergies: ['Bastion', 'Ashe', 'Sigma'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Brigitte', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/48392820c6976ee1cd8dde13e71df85bf15560083ee5c8658fe7c298095d619a.png',
-      counters: ['Tracer', 'Genji', 'Doomfist'], 
-      counteredBy: ['Pharah', 'Junkrat', 'Bastion'],
-      hardCounters: ['Pharah'],
-      softCounters: ['Tracer', 'Genji'],
-      synergies: ['Reinhardt', 'Lucio', 'Reaper'],
-      difficulty: 'easy'
-    },
-    { 
-      name: 'Illari', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/6b4dd7b1f6e1d1f6f1c0c2e2f2c1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1f1.png',
-      counters: ['Tracer', 'Genji', 'Pharah'], 
-      counteredBy: ['Winston', 'D.Va', 'Sombra'],
-      hardCounters: ['Winston'],
-      softCounters: ['Tracer'],
-      synergies: ['Pharah', 'Ashe', 'Hanzo'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Juno', 
-      image: 'https://static.playoverwatch.com/img/pages/heroes/juno/hero-select-portrait.png',
-      counters: ['Pharah', 'Echo', 'Genji'], 
-      counteredBy: ['Widowmaker', 'Ashe', 'Cassidy'],
-      hardCounters: ['Widowmaker'],
-      softCounters: ['Pharah', 'Echo'],
-      synergies: ['Pharah', 'Mercy', 'Echo'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Kiriko', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/088a7e8e0a6609c0e0223e1d4f861a318d619565db155e7a79f99c7e29b8c81d.png',
-      counters: ['Genji', 'Tracer', 'Sombra'], 
-      counteredBy: ['Winston', 'Moira', 'Symmetra'],
-      hardCounters: ['Winston'],
-      softCounters: ['Genji', 'Tracer'],
-      synergies: ['Genji', 'Sojourn', 'Hanzo'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Lifeweaver', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/39d4514f1b858bc228035b09d5a74ed41f8eeefc9a0d1873570b216ba04334df.png',
-      counters: ['Winston', 'Doomfist', 'Roadhog'], 
-      counteredBy: ['Widowmaker', 'Hanzo', 'Ashe'],
-      hardCounters: ['Widowmaker'],
-      softCounters: ['Winston'],
-      synergies: ['Pharah', 'Bastion', 'Widowmaker'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Lucio', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/e2ff2527610a0fbe0c9956f80925123ef3e66c213003e29d37436de30b90e4e1.png',
-      counters: ['Reaper', 'Mei', 'Junkrat'], 
-      counteredBy: ['Cassidy', 'Widowmaker', 'Pharah'],
-      hardCounters: ['Cassidy'],
-      softCounters: ['Reaper'],
-      synergies: ['Reinhardt', 'Reaper', 'Doomfist'],
-      difficulty: 'medium'
-    },
-    { 
-      name: 'Mercy', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/2508ddd39a178d5f6ae993ab43eeb3e7961e5a54a9507e6ae347381193f28943.png',
-      counters: ['Pharah', 'Genji', 'Widowmaker'], 
-      counteredBy: ['Widowmaker', 'Genji', 'Tracer'],
-      hardCounters: ['Genji'],
-      softCounters: ['Pharah'],
-      synergies: ['Pharah', 'Ashe', 'Echo'],
-      difficulty: 'easy'
-    },
-    { 
-      name: 'Moira', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/000beeb5606e01497897fa9210dd3b1e78e1159ebfd8afdc9e989047d7d3d08f.png',
-      counters: ['Genji', 'Tracer', 'Reaper'], 
-      counteredBy: ['Pharah', 'Widowmaker', 'Ana'],
-      hardCounters: ['Pharah'],
-      softCounters: ['Genji', 'Tracer'],
-      synergies: ['Reaper', 'Reinhardt', 'Winston'],
-      difficulty: 'easy'
-    },
-    { 
-      name: 'Zenyatta', 
-      image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/71cabc939c577581f66b952f9c70891db779251a790eb0c0f778bcc1df35197e.png',
-      counters: ['Roadhog', 'Reinhardt', 'Winston'], 
-      counteredBy: ['Tracer', 'Genji', 'Widowmaker'],
-      hardCounters: ['Tracer'],
-      softCounters: ['Roadhog', 'Reinhardt'],
-      synergies: ['Genji', 'Tracer', 'Winston'],
-      difficulty: 'hard'
-    }
-  ]
+tank: [
+{
+name: 'D.Va',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/ca114f72193e4d58a85c087e9409242f1a31e808cf4058678b8cbf767c2a9a0a.png',
+counters: ['Pharah', 'Junkrat', 'Reaper'],
+counteredBy: ['Zarya', 'Symmetra', 'Mei'],
+hardCounters: ['Zarya'],
+softCounters: ['Pharah', 'Junkrat'],
+synergies: ['Genji', 'Tracer', 'Pharah'],
+difficulty: 'medium'
+},
+{
+name: 'Doomfist',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/13750471c693c1a360eb19d5ace229c8599a729cd961d72ebee0e157657b7d18.png',
+counters: ['Widowmaker', 'Ashe', 'Ana'],
+counteredBy: ['Sombra', 'Pharah', 'Orisa'],
+hardCounters: ['Sombra'],
+softCounters: ['Widowmaker', 'Ashe'],
+synergies: ['Ana', 'Zarya', 'Lucio'],
+difficulty: 'hard'
+},
+{
+name: 'Junker Queen',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/b4fa5f937fe07ef56c78bca80be9602c062b8d4451692aecff50e2f68c5c6476.png',
+counters: ['Genji', 'Tracer', 'Lucio'],
+counteredBy: ['Ana', 'Zenyatta', 'Reaper'],
+hardCounters: ['Ana'],
+softCounters: ['Genji', 'Tracer'],
+synergies: ['Lucio', 'Brigitte', 'Reaper'],
+difficulty: 'medium'
+},
+{
+name: 'Mauga',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/9ee3f5a62893091d575ec0a0d66df878597086374202c6fc7da2d63320a7d02e.png',
+counters: ['Reinhardt', 'Winston', 'Brigitte'],
+counteredBy: ['Ana', 'Reaper', 'Bastion'],
+hardCounters: ['Ana'],
+softCounters: ['Reinhardt', 'Winston'],
+synergies: ['Baptiste', 'Mercy', 'Bastion'],
+difficulty: 'easy'
+},
+{
+name: 'Orisa',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/71e96294617e81051d120b5d04b491bb1ea40e2933da44d6631aae149aac411d.png',
+counters: ['Reinhardt', 'Roadhog', 'Pharah'],
+counteredBy: ['Sombra', 'Reaper', 'Junkrat'],
+hardCounters: ['Sombra'],
+softCounters: ['Pharah', 'Roadhog'],
+synergies: ['Bastion', 'Baptiste', 'Mercy'],
+difficulty: 'easy'
+},
+{
+name: 'Ramattra',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/3e0367155e1940a24da076c6f1f065aacede88dbc323631491aa0cd5a51e0b66.png',
+counters: ['Genji', 'Tracer', 'D.Va'],
+counteredBy: ['Bastion', 'Reaper', 'Pharah'],
+hardCounters: ['Bastion'],
+softCounters: ['Genji', 'Tracer'],
+synergies: ['Ana', 'Zenyatta', 'Reaper'],
+difficulty: 'hard'
+},
+{
+name: 'Reinhardt',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/490d2f79f8547d6e364306af60c8184fb8024b8e55809e4cc501126109981a65.png',
+counters: ['Genji', 'Tracer', 'Reaper'],
+counteredBy: ['Bastion', 'Junkrat', 'Reaper'],
+hardCounters: ['Bastion'],
+softCounters: ['Junkrat'],
+synergies: ['Ana', 'Lucio', 'Brigitte'],
+difficulty: 'medium'
+},
+{
+name: 'Roadhog',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/72e02e747b66b61fcbc02d35d350770b3ec7cbaabd0a7ca17c0d82743d43a7e8.png',
+counters: ['Sombra', 'Tracer', 'Genji'],
+counteredBy: ['Ana', 'Reaper', 'Mei'],
+hardCounters: ['Ana'],
+softCounters: ['Reaper'],
+synergies: ['Zenyatta', 'Kiriko', 'Ana'],
+difficulty: 'easy'
+},
+{
+name: 'Sigma',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/cd7a4c0a0df8924afb2c9f6df864ed040f20250440c36ca2eb634acf6609c5e4.png',
+counters: ['Pharah', 'Widowmaker', 'Hanzo'],
+counteredBy: ['Doomfist', 'Symmetra', 'Sombra'],
+hardCounters: ['Symmetra'],
+softCounters: ['Pharah'],
+synergies: ['Baptiste', 'Ashe', 'Hanzo'],
+difficulty: 'hard'
+},
+{
+name: 'Winston',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/bd9c8e634d89488459dfc1aeb21b602fa5c39aa05601a4167682f3a3fed4e0ee.png',
+counters: ['Genji', 'Widowmaker', 'Hanzo'],
+counteredBy: ['Reaper', 'Bastion', 'Roadhog'],
+hardCounters: ['Reaper'],
+softCounters: ['Genji', 'Widowmaker'],
+synergies: ['D.Va', 'Genji', 'Tracer'],
+difficulty: 'medium'
+},
+{
+name: 'Wrecking Ball',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/5c18e39ce567ee8a84078f775b9f76a2ba891de601c059a3d2b46b61ae4afb42.png',
+counters: ['Widowmaker', 'Ashe', 'Ana'],
+counteredBy: ['Sombra', 'Mei', 'Cassidy'],
+hardCounters: ['Sombra'],
+softCounters: ['Mei', 'Cassidy'],
+synergies: ['Tracer', 'Sombra', 'Zenyatta'],
+difficulty: 'hard'
+},
+{
+name: 'Zarya',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/8819ba85823136640d8eba2af6fd7b19d46b9ee8ab192a4e06f396d1e5231f7a.png',
+counters: ['D.Va', 'Roadhog', 'Reinhardt'],
+counteredBy: ['Pharah', 'Junkrat', 'Bastion'],
+hardCounters: ['Pharah'],
+softCounters: ['D.Va'],
+synergies: ['Reinhardt', 'Genji', 'Hanzo'],
+difficulty: 'hard'
+}
+],
+damage: [
+{
+name: 'Ashe',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/8dc2a024c9b7d95c7141b2ef065590dbc8d9018d12ad15f76b01923986702228.png',
+counters: ['Pharah', 'Echo', 'Mercy'],
+counteredBy: ['Genji', 'Tracer', 'Winston'],
+hardCounters: ['Genji'],
+softCounters: ['Pharah', 'Echo'],
+synergies: ['Mercy', 'Baptiste', 'Orisa'],
+difficulty: 'medium'
+},
+{
+name: 'Bastion',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/4d715f722c42215072b5dd0240904aaed7b5285df0b2b082d0a7f1865b5ea992.png',
+counters: ['Reinhardt', 'Orisa', 'Roadhog'],
+counteredBy: ['Genji', 'Tracer', 'Widowmaker'],
+hardCounters: ['Genji'],
+softCounters: ['Reinhardt', 'Orisa'],
+synergies: ['Orisa', 'Baptiste', 'Mercy'],
+difficulty: 'easy'
+},
+{
+name: 'Cassidy',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/6cfb48b5597b657c2eafb1277dc5eef4a07eae90c265fcd37ed798189619f0a5.png',
+counters: ['Tracer', 'Genji', 'Pharah'],
+counteredBy: ['Widowmaker', 'Hanzo', 'Roadhog'],
+hardCounters: ['Widowmaker'],
+softCounters: ['Tracer', 'Genji'],
+synergies: ['Ana', 'Baptiste', 'Reinhardt'],
+difficulty: 'medium'
+},
+{
+name: 'Echo',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/f086bf235cc6b7f138609594218a8385c8e5f6405a39eceb0deb9afb429619fe.png',
+counters: ['Junkrat', 'Torbjörn', 'Bastion'],
+counteredBy: ['Widowmaker', 'Soldier: 76', 'Ashe'],
+hardCounters: ['Widowmaker'],
+softCounters: ['Junkrat', 'Torbjörn'],
+synergies: ['Mercy', 'Ana', 'Baptiste'],
+difficulty: 'hard'
+},
+{
+name: 'Genji',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/4edf5ea6d58c449a2aeb619a3fda9fff36a069dfbe4da8bc5d8ec1c758ddb8dc.png',
+counters: ['Widowmaker', 'Hanzo', 'Bastion'],
+counteredBy: ['Winston', 'Symmetra', 'Moira'],
+hardCounters: ['Winston'],
+softCounters: ['Widowmaker', 'Hanzo'],
+synergies: ['Ana', 'Zenyatta', 'Winston'],
+difficulty: 'hard'
+},
+{
+name: 'Hanzo',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/aecd8fa677f0093344fab7ccb7c37516c764df3f5ff339a5a845a030a27ba7e0.png',
+counters: ['Bastion', 'Torbjörn', 'Zenyatta'],
+counteredBy: ['Genji', 'Tracer', 'Winston'],
+hardCounters: ['Genji'],
+softCounters: ['Bastion', 'Torbjörn'],
+synergies: ['Zarya', 'Sigma', 'Baptiste'],
+difficulty: 'hard'
+},
+{
+name: 'Junkrat',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/037e3df083624e5480f8996821287479a375f62b470572a22773da0eaf9441d0.png',
+counters: ['Reinhardt', 'Bastion', 'Torbjörn'],
+counteredBy: ['Pharah', 'Widowmaker', 'Zarya'],
+hardCounters: ['Pharah'],
+softCounters: ['Reinhardt', 'Bastion'],
+synergies: ['Orisa', 'Baptiste', 'Brigitte'],
+difficulty: 'easy'
+},
+{
+name: 'Mei',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/1533fcb0ee1d3f9586f84b4067c6f63eca3322c1c661f69bfb41cd9e4f4bcc11.png',
+counters: ['Winston', 'Roadhog', 'Doomfist'],
+counteredBy: ['Pharah', 'Widowmaker', 'Hanzo'],
+hardCounters: ['Pharah'],
+softCounters: ['Winston', 'Roadhog'],
+synergies: ['Zarya', 'Ana', 'Lucio'],
+difficulty: 'medium'
+},
+{
+name: 'Pharah',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/f8261595eca3e43e3b37cadb8161902cc416e38b7e0caa855f4555001156d814.png',
+counters: ['Junkrat', 'Torbjörn', 'Bastion'],
+counteredBy: ['Widowmaker', 'Soldier: 76', 'Ashe'],
+hardCounters: ['Widowmaker'],
+softCounters: ['Junkrat', 'Torbjörn'],
+synergies: ['Mercy', 'Ana', 'Baptiste'],
+difficulty: 'medium'
+},
+{
+name: 'Reaper',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/2edb9af69d987bb503cd31f7013ae693640e692b321a73d175957b9e64394f40.png',
+counters: ['Winston', 'Roadhog', 'Reinhardt'],
+counteredBy: ['Pharah', 'Widowmaker', 'Cassidy'],
+hardCounters: ['Pharah'],
+softCounters: ['Winston', 'Roadhog'],
+synergies: ['Lucio', 'Moira', 'Ana'],
+difficulty: 'easy'
+},
+{
+name: 'Sojourn',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/a53bf7ad9d2f33aaf9199a00989f86d4ba1f67c281ba550312c7d96e70fec4ea.png',
+counters: ['Pharah', 'Echo', 'Widowmaker'],
+counteredBy: ['Genji', 'Tracer', 'Sombra'],
+hardCounters: ['Genji'],
+softCounters: ['Pharah', 'Echo'],
+synergies: ['Baptiste', 'Mercy', 'Reinhardt'],
+difficulty: 'medium'
+},
+{
+name: 'Soldier: 76',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/20b4ef00ed05d6dba75df228241ed528df7b6c9556f04c8070bad1e2f89e0ff5.png',
+counters: ['Pharah', 'Mercy', 'Bastion'],
+counteredBy: ['Widowmaker', 'Genji', 'Roadhog'],
+hardCounters: ['Widowmaker'],
+softCounters: ['Pharah', 'Mercy'],
+synergies: ['Ana', 'Baptiste', 'Reinhardt'],
+difficulty: 'easy'
+},
+{
+name: 'Sombra',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/bca8532688f01b071806063b9472f1c0f9fc9c7948e6b59e210006e69cec9022.png',
+counters: ['Doomfist', 'Wrecking Ball', 'Tracer'],
+counteredBy: ['Winston', 'Moira', 'Brigitte'],
+hardCounters: ['Winston'],
+softCounters: ['Doomfist', 'Wrecking Ball'],
+synergies: ['Tracer', 'Wrecking Ball', 'Zenyatta'],
+difficulty: 'hard'
+},
+{
+name: 'Symmetra',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/7f2024c5387c9d76d944a5db021c2774d1e9d7cbf39e9b6a35b364d38ea250ac.png',
+counters: ['Genji', 'D.Va', 'Tracer'],
+counteredBy: ['Pharah', 'Widowmaker', 'Junkrat'],
+hardCounters: ['Pharah'],
+softCounters: ['Genji', 'Tracer'],
+synergies: ['Orisa', 'Baptiste', 'Brigitte'],
+difficulty: 'medium'
+},
+{
+name: 'Torbjörn',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/1309ab1add1cc19189a2c8bc7b1471f88efa1073e9705d2397fdb37d45707d01.png',
+counters: ['Tracer', 'Genji', 'Lucio'],
+counteredBy: ['Pharah', 'Junkrat', 'Widowmaker'],
+hardCounters: ['Pharah'],
+softCounters: ['Tracer', 'Genji'],
+synergies: ['Brigitte', 'Baptiste', 'Orisa'],
+difficulty: 'easy'
+},
+{
+name: 'Tracer',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/a66413200e934da19540afac965cfe8a2de4ada593d9a52d53108bb28e8bbc9c.png',
+counters: ['Widowmaker', 'Hanzo', 'Zenyatta'],
+counteredBy: ['Cassidy', 'Brigitte', 'Torbjörn'],
+hardCounters: ['Cassidy'],
+softCounters: ['Widowmaker', 'Hanzo'],
+synergies: ['Winston', 'Lucio', 'Zenyatta'],
+difficulty: 'hard'
+},
+{
+name: 'Widowmaker',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/a714f1cb33cc91c6b5b3e89ffe7e325b99e7c89cc8e8feced594f81305147efe.png',
+counters: ['Pharah', 'Zenyatta', 'Ana'],
+counteredBy: ['Genji', 'Tracer', 'Winston'],
+hardCounters: ['Genji'],
+softCounters: ['Pharah', 'Zenyatta'],
+synergies: ['Mercy', 'Baptiste', 'Orisa'],
+difficulty: 'hard'
+},
+{
+name: 'Venture',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/5d87623006ccc77578396831d4629f91b5162235a553b3f442e1a43161898e94.png',
+counters: ['Bastion', 'Torbjörn', 'Symmetra'],
+counteredBy: ['Pharah', 'Echo', 'Mei'],
+hardCounters: ['Pharah'],
+softCounters: ['Bastion', 'Torbjörn'],
+synergies: ['Lucio', 'Ana', 'Baptiste'],
+difficulty: 'medium'
+}
+],
+support: [
+{
+name: 'Ana',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/3429c394716364bbef802180e9763d04812757c205e1b4568bc321772096ed86.png',
+counters: ['Roadhog', 'Pharah', 'Widowmaker'],
+counteredBy: ['Genji', 'Tracer', 'Winston'],
+hardCounters: ['Genji'],
+softCounters: ['Roadhog', 'Pharah'],
+synergies: ['Reinhardt', 'Genji', 'Pharah'],
+difficulty: 'hard'
+},
+{
+name: 'Baptiste',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/f979896f74ba22db2a92a85ae1260124ab0a26665957a624365e0f96e5ac5b5c.png',
+counters: ['Pharah', 'Genji', 'Roadhog'],
+counteredBy: ['Sombra', 'Widowmaker', 'Hanzo'],
+hardCounters: ['Sombra'],
+softCounters: ['Pharah'],
+synergies: ['Bastion', 'Ashe', 'Sigma'],
+difficulty: 'medium'
+},
+{
+name: 'Brigitte',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/48392820c6976ee1cd8dde13e71df85bf15560083ee5c8658fe7c298095d619a.png',
+counters: ['Tracer', 'Genji', 'Doomfist'],
+counteredBy: ['Pharah', 'Junkrat', 'Bastion'],
+hardCounters: ['Pharah'],
+softCounters: ['Tracer', 'Genji'],
+synergies: ['Reinhardt', 'Lucio', 'Reaper'],
+difficulty: 'easy'
+},
+{
+name: 'Illari',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/5ea986038f9d307bd4613d5e6f2c4c8e7f15f30ceeeabbdd7a06637a38f17e1f.png',
+counters: ['Tracer', 'Genji', 'Pharah'],
+counteredBy: ['Winston', 'D.Va', 'Sombra'],
+hardCounters: ['Winston'],
+softCounters: ['Tracer'],
+synergies: ['Pharah', 'Ashe', 'Hanzo'],
+difficulty: 'medium'
+},
+{
+name: 'Juno',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/585b2d60cbd3c271b6ad5ad0922537af0c6836fab6c89cb9979077f7bb0832b5.png',
+counters: ['Pharah', 'Echo', 'Genji'],
+counteredBy: ['Widowmaker', 'Ashe', 'Cassidy'],
+hardCounters: ['Widowmaker'],
+softCounters: ['Pharah', 'Echo'],
+synergies: ['Pharah', 'Mercy', 'Echo'],
+difficulty: 'medium'
+},
+{
+name: 'Kiriko',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/088aff2153bdfa426984b1d5c912f6af0ab313f0865a81be0edd114e9a2f79f9.png',
+counters: ['Genji', 'Tracer', 'Sombra'],
+counteredBy: ['Winston', 'Moira', 'Symmetra'],
+hardCounters: ['Winston'],
+softCounters: ['Genji', 'Tracer'],
+synergies: ['Genji', 'Sojourn', 'Hanzo'],
+difficulty: 'medium'
+},
+{
+name: 'Lifeweaver',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/39d4514f1b858bc228035b09d5a74ed41f8eeefc9a0d1873570b216ba04334df.png',
+counters: ['Winston', 'Doomfist', 'Roadhog'],
+counteredBy: ['Widowmaker', 'Hanzo', 'Ashe'],
+hardCounters: ['Widowmaker'],
+softCounters: ['Winston'],
+synergies: ['Pharah', 'Bastion', 'Widowmaker'],
+difficulty: 'medium'
+},
+{
+name: 'Lucio',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/e2ff2527610a0fbe0c9956f80925123ef3e66c213003e29d37436de30b90e4e1.png',
+counters: ['Reaper', 'Mei', 'Junkrat'],
+counteredBy: ['Cassidy', 'Widowmaker', 'Pharah'],
+hardCounters: ['Cassidy'],
+softCounters: ['Reaper'],
+synergies: ['Reinhardt', 'Reaper', 'Doomfist'],
+difficulty: 'medium'
+},
+{
+name: 'Mercy',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/2508ddd39a178d5f6ae993ab43eeb3e7961e5a54a9507e6ae347381193f28943.png',
+counters: ['Pharah', 'Genji', 'Widowmaker'],
+counteredBy: ['Widowmaker', 'Genji', 'Tracer'],
+hardCounters: ['Genji'],
+softCounters: ['Pharah'],
+synergies: ['Pharah', 'Ashe', 'Echo'],
+difficulty: 'easy'
+},
+{
+name: 'Moira',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/000beeb5606e01497897fa9210dd3b1e78e1159ebfd8afdc9e989047d7d3d08f.png',
+counters: ['Genji', 'Tracer', 'Reaper'],
+counteredBy: ['Pharah', 'Widowmaker', 'Ana'],
+hardCounters: ['Pharah'],
+softCounters: ['Genji', 'Tracer'],
+synergies: ['Reaper', 'Reinhardt', 'Winston'],
+difficulty: 'easy'
+},
+{
+name: 'Zenyatta',
+image: 'https://d15f34w2p8l1cc.cloudfront.net/overwatch/71cabc939c577581f66b952f9c70891db779251e8e70f29de3c7bf494edacfe4.png',
+counters: ['Roadhog', 'Reinhardt', 'Winston'],
+counteredBy: ['Tracer', 'Genji', 'Widowmaker'],
+hardCounters: ['Tracer'],
+softCounters: ['Roadhog', 'Reinhardt'],
+synergies: ['Genji', 'Tracer', 'Winston'],
+difficulty: 'hard'
+}
+]
 };
 
 const tips = {
