@@ -248,7 +248,7 @@ export default function OverwatchCounterPick() {
             </h2>
             <p className="text-slate-400 text-sm mb-6">
               Algorithm: Hard counters (+3), Soft counters (+1), Hard weak (-3), Soft weak (-1),
-              Synergies (+1 each), Best map (+1), Mirror counter (+1)
+              Synergies (+2 each), Best map (+3), Mirror counter (+1)
             </p>
             <div className="space-y-4">
               {recommendations.map((hero, index) => (

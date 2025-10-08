@@ -98,7 +98,7 @@ export const calculateRecommendations = (selectedRole, enemyTeam, allyTeam, sele
     });
 
     if (synergyCount > 0) {
-      score += synergyCount;
+      score += synergyCount*2;
       reasons.push(`Synergy with ${synergyHeroes.join(', ')}`);
     }
     if (selectedMap && hero.bestMaps && hero.bestMaps.includes(selectedMap)) {
