@@ -1,4 +1,3 @@
-
 // heroesData.js - Updated Overwatch 2 Heroes Data (October 2025)
 
 export const heroes = {
@@ -13,6 +12,11 @@ export const heroes = {
       softCounteredBy: ['Winston', 'Moira', 'Sojourn', 'Bastion', 'Mei', 'Symmetra'],
       synergies: ['Genji', 'Tracer', 'Winston'],
       bestMaps: ['Antarctic Peninsula', 'Colosseo', 'Dorado'],
+      worstMaps: ['Ilios', 'Nepal', 'Lijiang Tower'],
+      mapExplanation: {
+        good: 'D.Va excels on maps with tight corridors and multiple flank routes where Defense Matrix can eat key abilities. Vertical mobility allows her to contest high ground easily.',
+        bad: 'Struggles on open KOTH maps where beam weapons (her counters) have clear sightlines and she cannot use cover effectively. Limited sustainability in long sightline engagements.'
+      },
       counterExplanation: {
         counters: 'Defense Matrix blocks projectiles from Pharah and Junkrat. Mobility allows chasing snipers and flying to eliminate Torbjorn turrets',
         counteredBy: 'Zarya beam bypasses Defense Matrix entirely. Winston, Moira and Sojourn also ignore matrix with beam attacks. Bastion tracks her mobility with sustained damage. Mei freeze stops her mobility and boosters. Symmetra beam bypasses matrix and locks on.'
@@ -28,6 +32,11 @@ export const heroes = {
       softCounteredBy: ['Tracer', 'Genji', 'Brigitte', 'Wrecking Ball', 'Echo', 'Pharah', 'Mei'],
       synergies: ['Ana', 'Zarya', 'Lucio'],
       bestMaps: ['Circuit Royal', 'Colosseo', 'Midtown'],
+      worstMaps: ['Junkertown', 'Havana', 'Rialto'],
+      mapExplanation: {
+        good: 'Thrives on maps with environmental kill opportunities and tight spaces where Power Block is effective. Vertical architecture allows for powerful Seismic Slam combos.',
+        bad: 'Struggles on open, flat maps where he can be kited easily. Long sightlines expose him to poke damage and he lacks escape options in wide-open areas.'
+      },
       counterExplanation: {
         counters: 'Can dive on static snipers. Power Block absorbs their shots. Mobility makes it hard to be hit',
         counteredBy: 'Sombra hack removes all abilities. Mobile heroes (Tracer/Genji) avoid Power Block and kite. Brigitte stuns and cancels combos. Ball disrupts positioning. Echo flight avoids dives, Pharah stays airborne, Mei freeze stops slam and punch.'
@@ -43,6 +52,11 @@ export const heroes = {
       softCounteredBy: ['Lucio', 'Kiriko', 'Widowmaker', 'Hanzo', 'Orisa', 'Bastion', 'Mei'],
       synergies: ['Lucio', 'Brigitte', 'Reaper'],
       bestMaps: ['Hollywood'],
+      worstMaps: ['Junkertown', 'Havana', 'Circuit Royal'],
+      mapExplanation: {
+        good: 'Excels on close-quarters brawl maps where her axe and knife are most effective. Short engagements allow her wounds to stack quickly.',
+        bad: 'Struggles on maps with long sightlines where she can be poked down before engaging. Open areas prevent her from utilizing her close-range kit effectively.'
+      },
       counterExplanation: {
         counters: 'Jagged Blade catches mobile heroes. Commanding Shout speed helps chase Genji/Tracer. Area damage hits Lucio',
         counteredBy: 'Ana anti-heal negates her lifesteal entirely. Lucio and Kiriko cleanse wound damage. Long-range snipers stay out of her effective range. Orisa fortify resists, Bastion shreds at range, Mei walls block engages.'
@@ -58,6 +72,11 @@ export const heroes = {
       softCounteredBy: ['Wrecking Ball', 'Kiriko', 'Sombra', 'Sigma'],
       synergies: ['Baptiste', 'Mercy', 'Bastion'],
       bestMaps: ['Busan', 'Hollywood', 'Midtown'],
+      worstMaps: ['Junkertown', 'Circuit Royal', 'Havana'],
+      mapExplanation: {
+        good: 'Dominates on KOTH maps and tight corridors where enemies are forced into his dual-gun range. Cardiac Overdrive sustains through spam damage in grouped fights.',
+        bad: 'Struggles on payload maps with long sightlines where he can be poked from distance. Lacks mobility to reposition quickly on maps with multiple levels.'
+      },
       counterExplanation: {
         counters: 'Sustained dual guns melt shields and close-range brawlers. Cardiac Overdrive outheals their damage output',
         counteredBy: 'Ana anti-heal stops his lifesteal. Ball outmaneuvers him. Kiriko mobility escapes his range. Sombra hack removes abilities. Sigma grasp absorbs guns and stuns.'
@@ -73,6 +92,11 @@ export const heroes = {
       softCounteredBy: ['Winston', 'Mei', 'Zarya', 'D.Va', 'Bastion', 'Lifeweaver', 'Zenyatta'],
       synergies: ['Bastion', 'Baptiste', 'Mercy'],
       bestMaps: ['Antarctic Peninsula', 'Busan', 'Eichenwalde'],
+      worstMaps: ['Lijiang Tower', 'Nepal', 'Ilios'],
+      mapExplanation: {
+        good: 'Strong on defense points and chokepoints where Javelin Spin blocks spam. Fortify prevents displacement on maps with environmental hazards.',
+        bad: 'Struggles on maps requiring high mobility and quick rotations. Open KOTH maps where flankers can easily access her backline.'
+      },
       counterExplanation: {
         counters: 'Javelin Spin blocks Rein attacks and Roadhog shots. Fortify prevents hooks. Energy Javelin penetrates shields',
         counteredBy: 'Sombra hack removes Fortify. Beam weapons (Winston/Mei/Zarya) bypass Javelin Spin. D.Va eats projectiles and dives her. Bastion sustained DPS melts, Lifeweaver grip saves from javelin, Zen discord amplifies damage.'
@@ -88,6 +112,11 @@ export const heroes = {
       softCounteredBy: ['Genji', 'Tracer', 'Pharah', 'Kiriko', 'Zenyatta', 'Ana', 'Orisa'],
       synergies: ['Ana', 'Zenyatta', 'Reaper'],
       bestMaps: ['Antarctic Peninsula', 'Shambali Monastery'],
+      worstMaps: ['Junkertown', 'Havana', 'Circuit Royal'],
+      mapExplanation: {
+        good: 'Excels on maps with tight spaces where Nemesis form punches hit multiple enemies. Control points benefit from his area denial with Ravenous Vortex.',
+        bad: 'Struggles on open maps where enemies can maintain distance from Nemesis form. Long sightlines allow poke damage that drains his resources.'
+      },
       counterExplanation: {
         counters: 'Block ability counters Bastion turret mode. Nemesis form punches through D.Va. Area damage in Nemesis catches Reaper',
         counteredBy: 'Bastion sustained DPS burns through his forms. Mobile DPS (Genji/Tracer/Pharah) kite around Nemesis form Block. Kiriko range damage is safe. Zenyatta discord melts, Ana anti-heal, Orisa javelin pins.'
@@ -103,6 +132,11 @@ export const heroes = {
       softCounteredBy: ['Sombra', 'Junkrat', 'Cassidy', 'Zenyatta', 'Ramattra', 'Pharah'],
       synergies: ['Ana', 'Lucio', 'Brigitte'],
       bestMaps: ['Busan', 'Eichenwalde', 'Hanaoka'],
+      worstMaps: ['Junkertown', 'Circuit Royal', 'Dorado'],
+      mapExplanation: {
+        good: 'Dominates on maps with narrow corridors and chokepoints where his barrier provides maximum value. Environmental kill opportunities with Charge.',
+        bad: 'Struggles on open maps with multiple angles of attack that bypass his frontal barrier. High ground access routes that avoid his effective range.'
+      },
       counterExplanation: {
         counters: 'Shield blocks projectiles from mobile DPS. Fire Strike damages through deflect. Charge punishes positioning',
         counteredBy: 'Bastion melts shield instantly. Sombra hack drops shield. Junkrat spam breaks barrier. Cassidy flashbang stops charge. Zen discord melts him when exposed. Ramattra nemesis punches through shield, Pharah attacks from air.'
@@ -118,6 +152,11 @@ export const heroes = {
       softCounteredBy: ['Tracer', 'Genji', 'Junkrat', 'Reaper', 'Ashe', 'Sojourn', 'Orisa'],
       synergies: ['Zenyatta', 'Kiriko', 'Ana'],
       bestMaps: ['Havana', 'Ilios', 'Junkertown'],
+      worstMaps: ['Circuit Royal', 'Rialto', 'Numbani'],
+      mapExplanation: {
+        good: 'Excels on maps with environmental kill opportunities and tight corners for hook setups. Close-quarters areas where his one-shot combo is effective.',
+        bad: 'Struggles on open maps where he becomes an ultimate battery. Long sightlines allow enemies to poke him safely without hook threat.'
+      },
       counterExplanation: {
         counters: 'Hook one-shots squishies. Can catch out-of-position flankers. High damage punishes bad positioning',
         counteredBy: 'Ana anti-heal negates self-heal entirely (biggest counter). Mobile heroes dodge hook. Junkrat and Reaper deal massive damage he cannot outheal. Ashe and Sojourn outrange, Orisa fortify resists hook.'
@@ -133,6 +172,11 @@ export const heroes = {
       softCounteredBy: ['Genji', 'Lucio', 'Ramattra', 'Roadhog', 'Zarya', 'Sombra', 'Bastion'],
       synergies: ['Baptiste', 'Ashe', 'Hanzo'],
       bestMaps: ['Antarctic Peninsula', 'Busan', 'Circuit Royal'],
+      worstMaps: ['King\'s Row', 'Eichenwalde', 'Hollywood'],
+      mapExplanation: {
+        good: 'Strong on maps with long sightlines where he can poke safely. Multiple angles to place barrier strategically and absorb projectile spam with Kinetic Grasp.',
+        bad: 'Struggles on close-quarters brawl maps where beam weapons dominate. KOTH maps where fast-paced fights prevent careful barrier placement.'
+      },
       counterExplanation: {
         counters: 'Kinetic Grasp absorbs projectiles from snipers and Pharah. Accretion stuns flying targets. Shield blocks sightlines',
         counteredBy: 'Symmetra beam bypasses shield and grasp. Fast heroes (Genji/Lucio) dodge abilities. Ramattra and Roadhog brawl in close range where Sigma struggles. Zarya bubbles absorb, Sombra hacks, Bastion shreds.'
@@ -148,6 +192,11 @@ export const heroes = {
       softCounteredBy: ['Bastion', 'Ana', 'Brigitte', 'D.Va'],
       synergies: ['D.Va', 'Genji', 'Tracer'],
       bestMaps: ['Circuit Royal', 'Colosseo', 'Dorado'],
+      worstMaps: ['Junkertown', 'Havana', 'Rialto'],
+      mapExplanation: {
+        good: 'Excels on maps with abundant high ground and vertical spaces. Control points where he can dive backlines and use bubble for cover.',
+        bad: 'Struggles on flat, open maps with limited cover where he becomes an easy target. Maps with long sightlines that favor his counters like Reaper.'
+      },
       counterExplanation: {
         counters: 'Beam auto-locks mobile targets like Genji. Jump Pack reaches high-ground snipers. Bubble blocks their shots',
         counteredBy: 'Reaper massive close-range damage melts him. Bastion tracks and shreds him. Ana sleep and anti-heal stop dives. Brigitte stun cancels jump. D.Va matrix eats tesla cannon.'
@@ -163,6 +212,11 @@ export const heroes = {
       softCounteredBy: ['Mei', 'Roadhog', 'Brigitte', 'Cassidy', 'Tracer'],
       synergies: ['Tracer', 'Sombra', 'Zenyatta'],
       bestMaps: ['Dorado', 'Esperança', 'Junkertown'],
+      worstMaps: ['King\'s Row', 'Eichenwalde', 'Hollywood'],
+      mapExplanation: {
+        good: 'Dominates on maps with environmental kill opportunities and open spaces for building momentum. Vertical architecture for creative grapple plays.',
+        bad: 'Struggles on tight indoor maps where he cannot build speed effectively. Cramped spaces where CC abilities easily interrupt his movement.'
+      },
       counterExplanation: {
         counters: 'Mobility disrupts static snipers. Piledriver displaces them. Speed makes him hard to hit. Outmaneuvers slow Mauga',
         counteredBy: 'Sombra hack disables all movement abilities. Mei freeze stops momentum. Roadhog hook interrupts roll. Brigitte stun stops engages. Cassidy flashbang, Tracer kites.'
@@ -178,6 +232,11 @@ export const heroes = {
       softCounteredBy: ['Cassidy', 'Widowmaker', 'D.Va', 'Reinhardt', 'Soldier: 76', 'Lifeweaver'],
       synergies: ['Reinhardt', 'Genji', 'Hanzo'],
       bestMaps: ['Rialto'],
+      worstMaps: ['Junkertown', 'Circuit Royal', 'Havana'],
+      mapExplanation: {
+        good: 'Strong on brawl-heavy maps where she can consistently gain energy from spam damage. Tight corridors where high-energy beam is devastating.',
+        bad: 'Struggles on maps with long sightlines where burst damage exploits bubble downtime. Open areas where teams can spread out to avoid Graviton Surge.'
+      },
       counterExplanation: {
         counters: 'Bubbles absorb spam damage gaining charge. D.Va Defense Matrix feeds massive energy. High charge melts shields and tanks',
         counteredBy: 'Burst damage heroes (Cassidy/Widow) exploit bubble downtime. D.Va eats Grav. Precision damage avoids feeding bubbles. Reinhardt pins with fire strike, Soldier tracks, Lifeweaver grips away.'
@@ -195,6 +254,11 @@ export const heroes = {
       softCounteredBy: ['Tracer', 'Widowmaker', 'Zarya', 'Ana', 'Winston', 'Doomfist', 'Kiriko'],
       synergies: ['Mercy', 'Baptiste', 'Orisa'],
       bestMaps: ['Antarctic Peninsula', 'Circuit Royal', 'Colosseo'],
+      worstMaps: ['King\'s Row', 'Eichenwalde', 'Nepal'],
+      mapExplanation: {
+        good: 'Excels on maps with long sightlines and high ground positions for Coach Gun mobility. Open areas where Dynamite splash damage hits multiple targets.',
+        bad: 'Struggles on tight indoor maps where flankers can close distance quickly. Close-quarters combat negates her range advantage.'
+      },
       counterExplanation: {
         counters: 'Hitscan shots hit flying Pharah/Echo easily. Dynamite area damage tags Mercy. B.O.B. zones flyers',
         counteredBy: 'Genji deflects shots and B.O.B. Tracer flanks before she can react. Widow outduels at range. Zarya bubble negates damage. Ana sleeps B.O.B. Winston dives, Doomfist punches, Kiriko suzu cleanses dynamite.'
@@ -210,6 +274,11 @@ export const heroes = {
       softCounteredBy: ['Junkrat', 'Pharah', 'Venture', 'Ana', 'Sigma'],
       synergies: ['Orisa', 'Baptiste', 'Mercy'],
       bestMaps: [],
+      worstMaps: ['Lijiang Tower', 'Nepal', 'Ilios'],
+      mapExplanation: {
+        good: 'Strong on defense points with clear sightlines and limited flanking routes. Payload maps where he can set up behind barriers.',
+        bad: 'Struggles on open KOTH maps where he is easily flanked from multiple angles. Maps with abundant cover that allow enemies to approach safely.'
+      },
       counterExplanation: {
         counters: 'Sustained DPS melts shields. Shreds tanks with large hitboxes. Configuration: Tank breaks barriers',
         counteredBy: 'Genji deflects turret damage back. Junkrat/Pharah/Venture attack from cover and angles. Ana sleep dart stops turret mode. Sigma grasp absorbs artillery.'
@@ -225,6 +294,11 @@ export const heroes = {
       softCounteredBy: ['Genji', 'Winston', 'Tracer', 'Mei'],
       synergies: ['Ana', 'Baptiste', 'Reinhardt'],
       bestMaps: ['Busan', 'Eichenwalde', 'Hanaoka'],
+      worstMaps: ['Junkertown', 'Circuit Royal', 'Havana'],
+      mapExplanation: {
+        good: 'Excels on mid-range maps with clear sightlines for flashbang setups. Control points where he can protect supports from flankers.',
+        bad: 'Struggles on long-range sniper maps where he is outranged. Very tight maps where his lack of mobility is exploited.'
+      },
       counterExplanation: {
         counters: 'Magnetic Grenade sticks and kills flankers. Flashbang stops Tracer recall. Roll dodges close attacks',
         counteredBy: 'Widowmaker outranges him significantly. Genji deflects flashbang and headshots. Winston jumps and pressures with bubble. Tracer outmaneuvers, Mei freezes.'
@@ -240,6 +314,11 @@ export const heroes = {
       softCounteredBy: ['Ana', 'Mei', 'Soldier: 76', 'Cassidy', 'Ashe'],
       synergies: ['Mercy', 'Ana', 'Baptiste'],
       bestMaps: ['Blizzard World', 'Busan', 'Colosseo'],
+      worstMaps: ['King\'s Row', 'Hollywood', 'Numbani'],
+      mapExplanation: {
+        good: 'Dominates on maps with vertical space and open skybox for flight. Control points where she can access unique angles above the fight.',
+        bad: 'Struggles on indoor maps with low ceilings that limit flight. Tight corridors where hitscan can easily track her movements.'
+      },
       counterExplanation: {
         counters: 'Flight accesses angles above turrets and static heroes. Focusing Beam executes low targets. Mobility avoids ground spam',
         counteredBy: 'Widowmaker easily headshots while flying. Ana sleep dart. Mei slows flight. Hitscan heroes (Soldier/Cassidy/Ashe) track her in air.'
@@ -255,6 +334,11 @@ export const heroes = {
       softCounteredBy: ['Moira', 'Mei', 'Ana', 'Brigitte'],
       synergies: ['Ana', 'Zenyatta', 'Winston'],
       bestMaps: ['Antarctic Peninsula', 'Dorado', 'Esperança'],
+      worstMaps: ['Junkertown', 'Havana', 'Circuit Royal'],
+      mapExplanation: {
+        good: 'Excels on maps with abundant vertical mobility and flanking routes. Control points where he can dive backlines and escape quickly.',
+        bad: 'Struggles on open maps with limited cover where he is easily tracked. Flat areas without walls for climbing or escape routes.'
+      },
       counterExplanation: {
         counters: 'Deflect sends shots back at snipers. Mobility flanks immobile targets. Swift Strike executes low HP heroes',
         counteredBy: 'Winston beam auto-locks through deflect. Moira beam ignores deflect. Mei freeze stops mobility. Ana sleep and anti-heal. Brigitte stuns dashes.'
@@ -270,6 +354,11 @@ export const heroes = {
       softCounteredBy: ['Genji', 'Lucio', 'D.Va', 'Winston', 'Echo'],
       synergies: ['Zarya', 'Sigma', 'Baptiste'],
       bestMaps: ['Circuit Royal', 'Dorado', 'Eichenwalde'],
+      worstMaps: ['Nepal', 'Lijiang Tower', 'Oasis'],
+      mapExplanation: {
+        good: 'Strong on maps with long sightlines and natural chokepoints for Dragonstrike. High ground positions for Sonic Arrow surveillance.',
+        bad: 'Struggles on tight indoor maps where projectile travel time is a disadvantage. Close-quarters where his lack of mobility is exposed.'
+      },
       counterExplanation: {
         counters: 'Storm Arrows shreds stationary targets. Sonic Arrow reveals positioning. One-shot potential on 200HP heroes',
         counteredBy: 'Genji deflects arrows and storm arrows. Mobile heroes (Lucio/Tracer) dodge projectiles. D.Va eats arrows and ultimate. Winston dives, Echo duplicates and outmobiles.'
@@ -285,6 +374,11 @@ export const heroes = {
       softCounteredBy: ['Sombra', 'Kiriko', 'Tracer', 'Zarya', 'Lifeweaver', 'Echo'],
       synergies: ['Orisa', 'Baptiste', 'Brigitte'],
       bestMaps: ['Blizzard World', 'Eichenwalde', 'Ilios'],
+      worstMaps: ['Junkertown', 'Circuit Royal', 'Havana'],
+      mapExplanation: {
+        good: 'Dominates on maps with tight corridors and chokepoints where grenade spam is unavoidable. Environmental hazards for mine displacement.',
+        bad: 'Struggles on open maps where Pharah and long-range heroes can avoid his projectiles. High ground positions he cannot easily contest.'
+      },
       counterExplanation: {
         counters: 'Grenades spam shields. Mine destroys turrets. Area damage denies choke points',
         counteredBy: 'Pharah attacks from above his arc. Fast heroes (Sombra/Kiriko/Tracer) dodge grenades. Zarya absorbs for charge. Lifeweaver outheals poke. Echo flies above.'
@@ -300,6 +394,11 @@ export const heroes = {
       softCounteredBy: ['Tracer', 'Sombra', 'D.Va', 'Orisa', 'Kiriko'],
       synergies: ['Zarya', 'Ana', 'Lucio'],
       bestMaps: ['Eichenwalde', 'Hollywood', 'King\'s Row'],
+      worstMaps: ['Junkertown', 'Havana', 'Ilios'],
+      mapExplanation: {
+        good: 'Excels on chokepoint-heavy maps where Ice Wall creates powerful separations. Indoor areas where freeze is most effective.',
+        bad: 'Struggles on open maps with multiple flanking routes that bypass Ice Wall. Long sightlines where Pharah and ranged heroes dominate.'
+      },
       counterExplanation: {
         counters: 'Freeze stops dive tanks. Ice Wall blocks Winston jump. Cryo-Freeze survives burst damage',
         counteredBy: 'Pharah attacks from range/air. Tracer recall cleanses freeze. Sombra hack prevents abilities. D.Va flies away from freeze. Orisa spin blocks, Kiriko suzu cleanses.'
@@ -315,6 +414,11 @@ export const heroes = {
       softCounteredBy: ['Cassidy', 'Ashe', 'Soldier: 76', 'D.Va', 'Symmetra'],
       synergies: ['Mercy', 'Ana', 'Baptiste'],
       bestMaps: ['Blizzard World', 'Eichenwalde', 'Ilios'],
+      worstMaps: ['King\'s Row', 'Hollywood', 'Numbani'],
+      mapExplanation: {
+        good: 'Dominates on maps with open skybox and vertical space for safe positioning. Control points where splash damage hits grouped enemies.',
+        bad: 'Struggles on indoor maps with low ceilings that force ground-level play. Maps with abundant cover that protect enemies from rockets.'
+      },
       counterExplanation: {
         counters: 'Flight avoids all ground-based heroes. Splash damage hits them from safety. Concussive Blast displaces',
         counteredBy: 'Widowmaker easy headshots on predictable flight. Hitscan heroes (Cassidy/Ashe/Soldier) track and burst. D.Va flies to contest and matrix rockets. Symmetra turrets track air.'
@@ -330,6 +434,11 @@ export const heroes = {
       softCounteredBy: ['Echo', 'Widowmaker', 'Junkrat', 'D.Va'],
       synergies: ['Lucio', 'Moira', 'Ana'],
       bestMaps: ['Eichenwalde', 'Junkertown', 'King\'s Row'],
+      worstMaps: ['Junkertown', 'Circuit Royal', 'Havana'],
+      mapExplanation: {
+        good: 'Excels on close-quarters maps where shotguns deal maximum damage. Indoor areas with limited escape routes for enemies.',
+        bad: 'Struggles on open maps with long sightlines where he cannot close distance. High ground positions he cannot easily access.'
+      },
       counterExplanation: {
         counters: 'Massive close-range DPS melts tanks. Lifesteal sustains through damage. Wraith escapes danger',
         counteredBy: 'Pharah/Echo stay airborne out of range. Long-range heroes (Widow/Hanzo) outrange shotguns. Junkrat mines create distance. D.Va matrix blocks shots.'
@@ -345,6 +454,11 @@ export const heroes = {
       softCounteredBy: ['Genji', 'Lucio', 'Mauga', 'Roadhog', 'D.Va', 'Widowmaker', 'Winston', 'Tracer'],
       synergies: ['Baptiste', 'Mercy', 'Reinhardt'],
       bestMaps: ['Busan', 'Esperança', 'Paraíso'],
+      worstMaps: ['King\'s Row', 'Eichenwalde', 'Nepal'],
+      mapExplanation: {
+        good: 'Strong on maps with long sightlines for charged railgun shots. Open areas where Power Slide provides effective mobility.',
+        bad: 'Struggles on tight indoor maps where her mobility is limited. Close-quarters combat where flankers can pressure her effectively.'
+      },
       counterExplanation: {
         counters: 'Railgun charged shots one-shot flyers. Hitscan tracking. Disruptor Shot zones areas',
         counteredBy: 'Genji deflects railgun. Fast heroes (Tracer/Lucio) dodge shots. Mauga and Roadhog disrupt and pull her out of position. D.Va matrix, Widow outranges, Winston dives.'
@@ -360,6 +474,11 @@ export const heroes = {
       softCounteredBy: ['Roadhog', 'Ashe', 'D.Va', 'Winston', 'Lucio'],
       synergies: ['Ana', 'Baptiste', 'Reinhardt'],
       bestMaps: ['Antarctic Peninsula', 'Blizzard World', 'Busan'],
+      worstMaps: ['Junkertown', 'Circuit Royal', 'Numbani'],
+      mapExplanation: {
+        good: 'Excels on maps with accessible high ground for Sprint positioning. Medium-range sightlines where his consistent damage is effective.',
+        bad: 'Struggles on extreme long-range maps where snipers dominate. Very tight spaces where his positioning advantage is negated.'
+      },
       counterExplanation: {
         counters: 'Consistent hitscan damage tracks flyers. Sprint positions for angles. Helix Rockets burst damage',
         counteredBy: 'Widowmaker outranges and one-shots. Roadhog hook punishes positioning. Ashe out-duels at range. D.Va matrix, Winston dives, Lucio boops.'
@@ -375,6 +494,11 @@ export const heroes = {
       softCounteredBy: ['Hanzo', 'Ana', 'Kiriko', 'Moira', 'Zenyatta'],
       synergies: ['Tracer', 'Wrecking Ball', 'Zenyatta'],
       bestMaps: ['Busan', 'Dorado', 'New Queen Street'],
+      worstMaps: ['Junkertown', 'Havana', 'Rialto'],
+      mapExplanation: {
+        good: 'Dominates on maps with abundant health packs near key positions. Control points where EMP can catch multiple enemies.',
+        bad: 'Struggles on payload maps with limited health pack access. Open areas where she has difficulty approaching safely even while invisible.'
+      },
       counterExplanation: {
         counters: 'Hack disables ability-reliant heroes entirely. EMP removes all abilities and shields. Virus executes low targets',
         counteredBy: 'Winston reveals her with tesla cannon area damage. Hanzo Sonic Arrow reveals stealth. Ana sleep. Kiriko Suzu cleanses hack. Moira beam tracks, Zen discord.'
@@ -390,6 +514,11 @@ export const heroes = {
       softCounteredBy: ['Sombra', 'Mauga', 'Roadhog', 'Winston', 'Zarya'],
       synergies: ['Orisa', 'Baptiste', 'Brigitte'],
       bestMaps: ['Nepal', 'Throne of Anubis'],
+      worstMaps: ['Junkertown', 'Circuit Royal', 'Havana'],
+      mapExplanation: {
+        good: 'Excels on control points where turret placement denies flanking routes. Tight corridors where charged orbs are difficult to avoid.',
+        bad: 'Struggles on open maps where turrets are easily destroyed from range. Long sightlines where Pharah and snipers dominate.'
+      },
       counterExplanation: {
         counters: 'Beam auto-locks mobile heroes. Turrets slow and reveal flankers. Teleporter creates unexpected angles',
         counteredBy: 'Pharah attacks from air. Sombra hacks turrets and teleporter. Tanks (Mauga/Roadhog) ignore turret damage. Winston dives, Zarya bubbles.'
@@ -405,6 +534,11 @@ export const heroes = {
       softCounteredBy: ['Junkrat', 'D.Va', 'Widowmaker', 'Winston', 'Ramattra', 'Sombra'],
       synergies: ['Brigitte', 'Baptiste', 'Orisa'],
       bestMaps: ['Antarctic Peninsula', 'Suravasa'],
+      worstMaps: ['Numbani', 'Circuit Royal', 'Dorado'],
+      mapExplanation: {
+        good: 'Strong on defense points where turret has clear sightlines. Indoor areas where turret is protected from long-range destruction.',
+        bad: 'Struggles on open maps where turret is easily destroyed by Pharah. Attack-focused maps where turret setup time is a disadvantage.'
+      },
       counterExplanation: {
         counters: 'Turret auto-locks flankers providing persistent damage. Overload increases survivability. Molten Core zones',
         counteredBy: 'Pharah destroys turret from air safely. Junkrat spam breaks turret. D.Va flies and eats rivet shots. Widow picks from range. Winston dives, Ramattra punches, Sombra hacks.'
@@ -420,6 +554,11 @@ export const heroes = {
       softCounteredBy: ['Mei', 'Symmetra', 'Torbjorn', 'Moira', 'Brigitte', 'Torbjorn'],
       synergies: ['Winston', 'Lucio', 'Zenyatta'],
       bestMaps: ['Blizzard World', 'Colosseo', 'Dorado'],
+      worstMaps: ['Junkertown', 'Havana', 'Circuit Royal'],
+      mapExplanation: {
+        good: 'Excels on maps with abundant flanking routes and health packs. Control points where she can harass backlines effectively.',
+        bad: 'Struggles on open maps with limited cover where she is easily tracked. Maps with few health packs that limit her sustain.'
+      },
       counterExplanation: {
         counters: 'Extreme mobility flanks immobile targets. Recall cleanses damage. Pulse Bomb one-shots squishies',
         counteredBy: 'Cassidy Magnetic Grenade sticks and kills. Mei freeze stops blinks. Torb/Sym turrets auto-lock. Moira beam tracks. Brigitte bash stuns. Torb turret locks on blinks.'
@@ -435,6 +574,11 @@ export const heroes = {
       softCounteredBy: ['Tracer', 'Winston', 'Widowmaker', 'Sombra', 'Lucio', 'Wrecking Ball', 'D.Va'],
       synergies: ['Mercy', 'Baptiste', 'Orisa'],
       bestMaps: ['Antarctic Peninsula', 'Blizzard World', 'Busan'],
+      worstMaps: ['King\'s Row', 'Eichenwalde', 'Nepal'],
+      mapExplanation: {
+        good: 'Dominates on maps with long sightlines and secure high ground positions. Open areas where enemies are forced into her crosshairs.',
+        bad: 'Struggles on close-quarters maps where flankers can dive her easily. Indoor areas with limited sightlines that negate her range advantage.'
+      },
       counterExplanation: {
         counters: 'One-shot headshots on squishies. Infra-Sight reveals positions. Grapple accesses unique sightlines',
         counteredBy: 'Genji deflects shots and dives. Tracer flanks before she can react. Winston jumps and pressures. Widow mirror match. Sombra hacks, Lucio boops, Ball swings in, D.Va dives.'
@@ -450,6 +594,11 @@ export const heroes = {
       softCounteredBy: ['Widowmaker', 'Sigma', 'Zarya', 'Mei', 'Sombra', 'Echo'],
       synergies: ['Lucio', 'Ana', 'Baptiste'],
       bestMaps: ['Hanaoka', 'Numbani', 'Shambali Monastery'],
+      worstMaps: ['Junkertown', 'Circuit Royal', 'Ilios'],
+      mapExplanation: {
+        good: 'Excels on maps with uneven terrain for creative burrow approaches. Control points where underground mobility disrupts enemy positioning.',
+        bad: 'Struggles on flat, open maps where burrow paths are predictable. Maps with abundant high ground she cannot easily access underground.'
+      },
       counterExplanation: {
         counters: 'Burrow approaches turrets underground. Drill Dash executes low HP targets. Underground immune to static defenses',
         counteredBy: 'Pharah attacks from air where Venture cannot reach. Widow/Sigma attack from high ground with sightlines. Zarya beam catches them emerging. Mei freezes on emergence, Sombra hacks, Echo flies.'
@@ -467,6 +616,11 @@ export const heroes = {
       softCounteredBy: ['Lucio', 'Tracer', 'Winston', 'Doomfist', 'Genji', 'Sombra', 'Kiriko', 'Widowmaker'],
       synergies: ['Reinhardt', 'Genji', 'Pharah'],
       bestMaps: ['Blizzard World', 'Busan', 'Circuit Royal'],
+      worstMaps: ['Nepal', 'Lijiang Tower', 'Oasis'],
+      mapExplanation: {
+        good: 'Excels on maps with long sightlines for safe healing and anti-nade. High ground positions where she can sleep dart key targets.',
+        bad: 'Struggles on maps with abundant cover that blocks her line of sight heals. Close-quarters where flankers can easily dive her.'
+      },
       counterExplanation: {
         counters: 'Anti-heal negates lifesteal heroes entirely. Sleep dart stops channeled abilities. Nano Boost turns fights',
         counteredBy: 'Mobile dive heroes (Tracer/Winston/Doom/Genji) pressure before she can sleep. Lucio speed makes team hard to hit. No escape ability. Sombra hacks, Kiriko suzu, Widow picks.'
@@ -482,6 +636,11 @@ export const heroes = {
       softCounteredBy: ['Lucio', 'Cassidy', 'Widowmaker', 'Hanzo', 'Reaper', 'Venture'],
       synergies: ['Bastion', 'Ashe', 'Sigma'],
       bestMaps: ['Busan', 'Dorado', 'Esperança'],
+      worstMaps: ['Nepal', 'Lijiang Tower', 'Ilios'],
+      mapExplanation: {
+        good: 'Strong on maps with clear sightlines for Immortality Field placement. High ground positions for Amplification Matrix usage.',
+        bad: 'Struggles on chaotic KOTH maps where Immortality Field is easily destroyed. Close-quarters where he cannot maintain safe distance.'
+      },
       counterExplanation: {
         counters: 'Immortality Field prevents burst damage. Amplification Matrix doubles team damage. Regenerative Burst group heal',
         counteredBy: 'Sombra hack disables lamp. Lucio boops team away from lamp. Precision heroes (Cassidy/Widow/Hanzo) destroy lamp and pick him. Reaper melts, Venture burrows under.'
@@ -497,6 +656,11 @@ export const heroes = {
       softCounteredBy: ['Cassidy', 'Soldier: 76', 'Junkrat', 'Bastion', 'Ramattra', 'Baptiste'],
       synergies: ['Reinhardt', 'Lucio', 'Reaper'],
       bestMaps: ['Eichenwalde', 'Hollywood', 'King\'s Row'],
+      worstMaps: ['Junkertown', 'Circuit Royal', 'Havana'],
+      mapExplanation: {
+        good: 'Dominates on close-quarters brawl maps where her melee range is effective. Tight corridors where Whip Shot hits are guaranteed.',
+        bad: 'Struggles on open maps with long sightlines where she cannot reach enemies. High ground positions she cannot easily access.'
+      },
       counterExplanation: {
         counters: 'Shield Bash stuns flankers. Inspire heal sustains brawl. Whip Shot displaces divers',
         counteredBy: 'Pharah attacks from air out of range. Long-range DPS (Cassidy/Soldier) break shield. Spam damage (Junkrat/Bastion) overwhelms. Ramattra punches through, Baptiste lamp negates burst.'
@@ -512,6 +676,11 @@ export const heroes = {
       softCounteredBy: ['Widowmaker', 'Ashe', 'Baptiste', 'D.Va', 'Sombra', 'Genji', 'Kiriko'],
       synergies: ['Pharah', 'Ashe', 'Hanzo'],
       bestMaps: ['New Junk City', 'Runasapi', 'Suravasa'],
+      worstMaps: ['King\'s Row', 'Eichenwalde', 'Nepal'],
+      mapExplanation: {
+        good: 'Excels on maps with long sightlines for Solar Rifle poke damage. Open areas where Healing Pylon covers large zones.',
+        bad: 'Struggles on tight indoor maps where pylon is easily destroyed. Close-quarters combat where dive heroes can pressure her.'
+      },
       counterExplanation: {
         counters: 'Solar Rifle long-range burst damage. Healing Pylon area heal. Captive Sun massive area damage',
         counteredBy: 'Winston dives and destroys pylon. Snipers (Widow/Ashe) outrange her. Baptiste outheals. D.Va eats rifle shots. Sombra hacks pylon. Genji deflects, Kiriko suzu.'
@@ -527,6 +696,11 @@ export const heroes = {
       softCounteredBy: ['D.Va', 'Lucio', 'Sombra', 'Ashe', 'Cassidy'],
       synergies: ['Pharah', 'Mercy', 'Echo'],
       bestMaps: ['Runasapi', 'Throne of Anubis'],
+      worstMaps: ['King\'s Row', 'Hollywood', 'Numbani'],
+      mapExplanation: {
+        good: 'Strong on maps with open skybox for glide mobility. Control points where speed boost enables aggressive team plays.',
+        bad: 'Struggles on indoor maps with low ceilings that limit glide effectiveness. Tight spaces where her mobility advantage is negated.'
+      },
       counterExplanation: {
         counters: 'Glide Gun projectile heal keeps flyers alive. Speed boost enables dive. Orbital Ray area damage',
         counteredBy: 'Widowmaker easily snipes while gliding. D.Va chases with boosters. Lucio matches speed. Sombra hack removes mobility. Hitscan burst (Ashe/Cassidy).'
@@ -542,6 +716,11 @@ export const heroes = {
       softCounteredBy: ['Tracer', 'Genji', 'Roadhog', 'Mei', 'Brigitte', 'Moira', 'Symmetra', 'Pharah', 'Echo'],
       synergies: ['Genji', 'Sojourn', 'Hanzo'],
       bestMaps: ['Esperança', 'Hanaoka', 'Havana'],
+      worstMaps: ['Junkertown', 'Circuit Royal', 'Ilios'],
+      mapExplanation: {
+        good: 'Excels on maps with flanking routes for teleport plays. Control points where Protection Suzu saves key positions.',
+        bad: 'Struggles on open maps with limited cover for teleport escapes. Long sightlines where her projectile kunai are difficult to land.'
+      },
       counterExplanation: {
         counters: 'Protection Suzu cleanses all debuffs and provides invulnerability. Teleport saves allies. Kunai headshot potential',
         counteredBy: 'Winston beam auto-locks through teleport. Fast flankers bait Suzu. Roadhog hook before teleport. Mei/Brigitte stun. Moira/Sym beam track. Pharah/Echo air attacks.'
@@ -557,6 +736,11 @@ export const heroes = {
       softCounteredBy: ['Sombra', 'Lucio', 'Hanzo', 'Ashe', 'Pharah', 'D.Va'],
       synergies: ['Pharah', 'Bastion', 'Widowmaker'],
       bestMaps: [],
+      worstMaps: ['Junkertown', 'Numbani', 'Circuit Royal'],
+      mapExplanation: {
+        good: 'Strong on maps with environmental hazards where Life Grip saves allies. Vertical spaces where Petal Platform creates value.',
+        bad: 'Struggles on flat maps where Petal Platform provides minimal advantage. Open areas where he is easily focused by long-range damage.'
+      },
       counterExplanation: {
         counters: 'Life Grip saves allies from dives and hooks. Petal Platform creates high ground. Healing Blossom strong heal',
         counteredBy: 'Widowmaker picks from long range. Sombra hack disables grip and platform. Lucio boops off platforms. Snipers exploit positioning. Pharah air, D.Va dives.'
@@ -572,6 +756,11 @@ export const heroes = {
       softCounteredBy: ['Symmetra', 'Moira', 'Winston', 'Mei', 'Wrecking Ball', 'Ramattra', 'Sombra'],
       synergies: ['Reinhardt', 'Reaper', 'Doomfist'],
       bestMaps: ['Busan', 'Colosseo', 'Dorado'],
+      worstMaps: ['Numbani', 'Havana', 'Hollywood'],
+      mapExplanation: {
+        good: 'Dominates on maps with environmental kill opportunities and abundant walls for riding. Control points where speed boost enables aggressive plays.',
+        bad: 'Struggles on open flat maps with limited wall-ride surfaces. Indoor areas with low ceilings that restrict his mobility.'
+      },
       counterExplanation: {
         counters: 'Speed boost enables brawl and disengages. Wall-ride avoids ground damage. Boop displaces enemies',
         counteredBy: 'Auto-lock heroes (Sym/Moira/Winston) track through movement. Mei freeze stops wall-ride. Ball disrupts positioning. Ramattra nemesis catches, Sombra hacks.'
@@ -587,6 +776,11 @@ export const heroes = {
       softCounteredBy: ['Widowmaker', 'Cassidy', 'Tracer', 'Reaper', 'Sombra', 'Soldier: 76'],
       synergies: ['Pharah', 'Ashe', 'Echo'],
       bestMaps: ['Dorado', 'Hanaoka', 'Ilios'],
+      worstMaps: ['King\'s Row', 'Eichenwalde', 'Nepal'],
+      mapExplanation: {
+        good: 'Excels on maps with vertical space for Guardian Angel mobility. Open areas where she can damage boost safely from multiple angles.',
+        bad: 'Struggles on tight indoor maps where flankers can corner her easily. Close-quarters combat where her lack of self-defense is exposed.'
+      },
       counterExplanation: {
         counters: 'Damage boost amplifies DPS output. Guardian Angel flight enables Pharmercy. Resurrect recovers key picks',
         counteredBy: 'Genji dives and pressures. Hitscan (Widow/Cassidy) shoot her while flying. Tracer/Reaper corner and eliminate. Sombra hacks GA, Soldier tracks.'
@@ -602,6 +796,11 @@ export const heroes = {
       softCounteredBy: ['Bastion', 'Junkrat', 'Widowmaker', 'Ana', 'D.Va', 'Brigitte'],
       synergies: ['Reaper', 'Reinhardt', 'Winston'],
       bestMaps: ['Antarctic Peninsula', 'Eichenwalde', 'King\'s Row'],
+      worstMaps: ['Junkertown', 'Circuit Royal', 'Havana'],
+      mapExplanation: {
+        good: 'Dominates on close-quarters brawl maps where her beam range is effective. Tight corridors where Coalescence hits multiple targets.',
+        bad: 'Struggles on open maps with long sightlines where she cannot reach enemies. High ground positions she cannot easily access.'
+      },
       counterExplanation: {
         counters: 'Biotic Grasp auto-locks mobile heroes. Fade escapes danger. Coalescence pierces shields and heals through damage',
         counteredBy: 'Pharah stays out of beam range. Long-range DPS (Bastion/Junkrat/Widow) outrange her. Ana anti-heal stops self-heal. D.Va matrix, Brigitte armor packs.'
@@ -617,6 +816,11 @@ export const heroes = {
       softCounteredBy: ['Genji', 'Pharah', 'Widowmaker', 'Sombra', 'Junker Queen', 'Zarya'],
       synergies: ['Genji', 'Tracer', 'Winston'],
       bestMaps: ['Nepal', 'Numbani'],
+      worstMaps: ['Dorado', 'Hollywood', 'King\'s Row'],
+      mapExplanation: {
+        good: 'Strong on maps with long sightlines for safe Discord Orb placement. High ground positions where his lack of mobility is less punishing.',
+        bad: 'Struggles on maps with abundant flanking routes where he is easily dove. Close-quarters combat where he cannot maintain safe distance.'
+      },
       counterExplanation: {
         counters: 'Discord Orb amplifies damage on tanks by 25%. Transcendence counters ultimates. High damage output',
         counteredBy: 'Tracer flanks and one-clips. Mobile heroes (Genji/Pharah) avoid his orbs. Widow one-shots. No mobility to escape. Sombra hacks, Junker Queen wounds, Zarya bubbles.'

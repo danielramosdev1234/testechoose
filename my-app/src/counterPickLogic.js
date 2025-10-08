@@ -102,8 +102,14 @@ export const calculateRecommendations = (selectedRole, enemyTeam, allyTeam, sele
       reasons.push(`Synergy with ${synergyHeroes.join(', ')}`);
     }
     if (selectedMap && hero.bestMaps && hero.bestMaps.includes(selectedMap)) {
-      score += 1;
+      score += 3;
       reasons.push(`Strong on ${selectedMap}`);
+    }
+
+    // ⭐ ADICIONAR: Penaliza se o mapa é ruim para o herói
+    if (selectedMap && hero.worstMaps && hero.worstMaps.includes(selectedMap)) {
+      score -= 3; // NOVO!
+      reasons.push(`Weak on ${selectedMap}`); // NOVO!
     }
 
     enemyTeam.forEach(enemy => {

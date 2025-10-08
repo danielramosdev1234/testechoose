@@ -234,7 +234,7 @@ export default function OverwatchCounterPick() {
               onClick={handleCalculate}
               className="bg-orange-600 hover:bg-orange-700 text-white font-bold py-4 px-8 rounded-lg text-xl transition-all transform hover:scale-105"
             >
-              🧠 Analyze with Advanced Algorithm
+              🧠 Analyze
             </button>
           </div>
         )}
@@ -304,6 +304,7 @@ export default function OverwatchCounterPick() {
                             reason.includes('Soft weak') ? 'text-red-400' :
                             reason.includes('Synergy') ? 'text-purple-300' :
                             reason.includes('Strong on') ? 'text-blue-300 font-semibold' :
+                            reason.includes('Weak on') ? 'text-orange-300 font-semibold' :
                             reason.includes('Mirror') ? 'text-cyan-300 font-semibold' :
                             'text-slate-300'
                           }`}>
@@ -312,6 +313,7 @@ export default function OverwatchCounterPick() {
                             {reason.includes('Synergy') && '🤝 '}
                             {reason.includes('Soft weak') && '⚠️ '}
                             {reason.includes('Strong on') && '🗺️ '}
+                            {reason.includes('Weak on') && '⚠️ '}
                             {reason.includes('Mirror') && '🎯 '}
                             • {reason}
                           </li>
@@ -335,6 +337,32 @@ export default function OverwatchCounterPick() {
                       </div>
                     </div>
                   )}
+
+              {hero.mapExplanation && (
+                <div className="mt-4 p-3 bg-slate-900/50 rounded-lg">
+                  <p className="text-yellow-300 font-semibold mb-2">🗺️ Map Analysis:</p>
+                  <div className="space-y-2 text-sm text-slate-300">
+                    <div>
+                      <strong className="text-green-400">Good Maps:</strong>
+                      <p className="ml-4 mt-1">{hero.mapExplanation.good}</p>
+                      {hero.bestMaps && hero.bestMaps.length > 0 && (
+                        <p className="ml-4 mt-1 text-blue-300 text-xs">
+                          Best on: {hero.bestMaps.join(', ')}
+                        </p>
+                      )}
+                    </div>
+                    <div>
+                      <strong className="text-red-400">Bad Maps:</strong>
+                      <p className="ml-4 mt-1">{hero.mapExplanation.bad}</p>
+                      {hero.worstMaps && hero.worstMaps.length > 0 && (
+                        <p className="ml-4 mt-1 text-orange-300 text-xs">
+                          Worst on: {hero.worstMaps.join(', ')}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
 
                   {tips[selectedRole] && tips[selectedRole][hero.name] && (
                     <div className="bg-slate-900/50 p-3 rounded mt-3">
